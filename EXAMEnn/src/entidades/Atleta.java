@@ -2,7 +2,6 @@ package entidades;
 
 import java.util.Scanner;
 
-
 public class Atleta extends Participante {
 
 	private long id;
@@ -10,6 +9,22 @@ public class Atleta extends Participante {
 	private float peso;
 
 	public Atleta() {
+		super();
+	}
+
+	public Atleta(long id, int dorsal, char calle, float altura, float peso) {
+		this.id = id;
+		this.dorsal = dorsal;
+		this.calle = calle;
+		this.altura = altura;
+		this.peso = peso;
+	}
+
+	public Atleta(Participante p, long id, float altura, float peso) {
+		super(p);
+		this.id = id;
+		this.altura = altura;
+		this.peso = peso;
 	}
 
 	public long getId() {
@@ -52,16 +67,13 @@ public class Atleta extends Participante {
 		ret.setAltura(sc.nextFloat());
 		System.out.println("Introduca el peso:");
 		ret.setPeso(sc.nextFloat());
-		
+
 		sc.close();
 		return ret;
 
-	
-		
 	}
 
 	public void setCategoria(String nextLine) {
-		
-		
+
 	}
 }

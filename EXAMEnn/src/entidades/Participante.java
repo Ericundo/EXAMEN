@@ -11,6 +11,17 @@ public class Participante {
 	public Participante() {
 	}
 
+	public Participante(long id, int dorsal, char calle) {
+		this.id = id;
+		this.dorsal = dorsal;
+		this.calle = calle;
+	}
+	
+	public Participante (Participante p) {
+		this.id = p.id;
+		this.dorsal = p.dorsal;
+		this.calle = p.calle;
+	}
 	public long getId() {
 		return id;
 	}
